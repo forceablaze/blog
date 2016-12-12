@@ -3,17 +3,41 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>Software switches in Linux | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://forceablaze.github.io/blog/archives/index.html">
+  <meta name="description" content="Linux has 3 types of software switches
+bridge
+macvlan
+Open vSwitch
+
+http://www.linuxfoundation.org/collaborate/workgroups/networking/
+bridge (IEEE 802.1D)
+fdb (Forwarding DB)
+Each Bridge instance has">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Software switches in Linux">
+<meta property="og:url" content="http://forceablaze.github.io/blog/2015/09/22/Software-switches-in-Linux/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="Linux has 3 types of software switches
+bridge
+macvlan
+Open vSwitch
+
+http://www.linuxfoundation.org/collaborate/workgroups/networking/
+bridge (IEEE 802.1D)
+fdb (Forwarding DB)
+Each Bridge instance has">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Software switches in Linux">
+<meta name="twitter:description" content="Linux has 3 types of software switches
+bridge
+macvlan
+Open vSwitch
+
+http://www.linuxfoundation.org/collaborate/workgroups/networking/
+bridge (IEEE 802.1D)
+fdb (Forwarding DB)
+Each Bridge instance has">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,220 +83,123 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/09/24/qcow2-format/" class="archive-article-date">
-  <time datetime="2015-09-24T09:37:05.000Z" itemprop="datePublished">Sep 24</time>
+        <section id="main"><article id="post-Software-switches-in-Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2015/09/22/Software-switches-in-Linux/" class="article-date">
+  <time datetime="2015-09-22T08:51:12.000Z" itemprop="datePublished">2015-09-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/09/24/qcow2-format/">qcow2 format</a>
+    <h1 class="article-title" itemprop="name">
+      Software switches in Linux
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/09/22/Software-switches-in-Linux/" class="archive-article-date">
-  <time datetime="2015-09-22T08:51:12.000Z" itemprop="datePublished">Sep 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/09/22/Software-switches-in-Linux/">Software switches in Linux</a>
-    </h1>
-  
+        <h2 id="Linux_has_3_types_of_software_switches">Linux has 3 types of software switches</h2><ul>
+<li>bridge</li>
+<li>macvlan</li>
+<li>Open vSwitch</li>
+</ul>
+<p><a href="http://www.linuxfoundation.org/collaborate/workgroups/networking/" target="_blank" rel="external">http://www.linuxfoundation.org/collaborate/workgroups/networking/</a></p>
+<h3 id="bridge_(IEEE_802-1D)">bridge (IEEE 802.1D)</h3><ul>
+<li>fdb (Forwarding DB)<ul>
+<li>Each Bridge instance has its own forwarding database used regardless whether STP is run or not.</li>
+<li>The Forwarding database is placed in the net_bridge data structure and defined as hash table.</li>
+<li>An instance of the net_bridge_fdb_entry data structure is added to the database for each MAC address learnt on the bridge ports.</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://bitwisertraining.com/8021DSTD/Introduction.htm" target="_blank" rel="external">http://bitwisertraining.com/8021DSTD/Introduction.htm</a>
+<a href="http://bitwisertraining.com/8021DSTD/M1L2P1.htm" target="_blank" rel="external">http://bitwisertraining.com/8021DSTD/M1L2P1.htm</a></p>
+<p><a href="http://blog.xuite.net/ivan1193/blog/7801194-Spanning+Tree+Protocol+" target="_blank" rel="external">http://blog.xuite.net/ivan1193/blog/7801194-Spanning+Tree+Protocol+</a></p>
+<ul>
+<li>Using <strong>promiscuous mode</strong> that allows to receive all packets<ul>
+<li>Common NIC filters unicast whose dst is not its mac address
+without promiscuous mode</li>
+<li>Many NICs also filter multicast / vlan-tagged packets by default</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://kernelnewbies.org/Bridging_and_Forwarding" target="_blank" rel="external">http://kernelnewbies.org/Bridging_and_Forwarding</a></p>
+<h3 id="macvlan">macvlan</h3><p>VLAN using not 802.1Q tag but <strong>mac address</strong></p>
+<ul>
+<li><p>4 types of mode</p>
+<ul>
+<li>bridge</li>
+<li>vepa (Virtual Ethernet Port Aggregator)</li>
+<li>private</li>
+<li>passthrough</li>
+</ul>
+</li>
+<li><p>Using <strong>unicast filtering</strong> if supported, instead of promiscuous mode (except for passthrough)</p>
+</li>
+</ul>
+<p><a href="http://virt.kernelnewbies.org/MacVTap" target="_blank" rel="external">http://virt.kernelnewbies.org/MacVTap</a>
+<a href="http://www.kernelchina.org/node/214" target="_blank" rel="external">http://www.kernelchina.org/node/214</a></p>
+<h3 id="Open_vSwitch">Open vSwitch</h3><h3 id="Hardware_Switch">Hardware Switch</h3><ul>
+<li>SR-IOV (single root I/O virtualization)</li>
+</ul>
+<p>SR-IOV allows a device, such as a network adapter, to separate access to its resources among various PCIe hardware functions. These functions consist of the following types:</p>
+<ul>
+<li>PF (Physical Function)</li>
+<li>VF (Virtual Function)</li>
+</ul>
+<p>PF 與 VF 之間的溝通透過 Layer2 的 classifier/sorter switch 處理。</p>
+<p>Example</p>
+<ol>
+<li>packet arrived</li>
+<li>send to L2 sorter</li>
+<li>sorted based upon mac/vlan, placed into queue/pool</li>
+<li>DMA action initiated (by Intel chipset )</li>
+<li>VT-d re-maps DMA address</li>
+</ol>
+<p>Removes CPU from the process of moving data to and from a VM. Data is DMA&#39;d directly to and from a VM without the software switch in the VMM ever &#39;touching&#39; it.</p>
+<p><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/hh440148(v=vs.85).aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/windows/hardware/hh440148(v=vs.85).aspx</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/06/15/fPIC/" class="archive-article-date">
-  <time datetime="2015-06-15T06:54:41.000Z" itemprop="datePublished">Jun 15</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/06/15/fPIC/">fPIC</a>
-    </h1>
-  
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://forceablaze.github.io/blog/2015/09/22/Software-switches-in-Linux/" data-id="ciho8m29x000d43ifac4dvshr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux-Network-KVM/">Linux,Network,KVM</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/05/25/OSI-Model/" class="archive-article-date">
-  <time datetime="2015-05-25T06:07:38.000Z" itemprop="datePublished">May 25</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/05/25/OSI-Model/">OSI Model</a>
-    </h1>
+    <a href="/blog/2015/09/24/qcow2-format/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          qcow2 format
+        
+      </div>
+    </a>
   
+  
+    <a href="/blog/2015/06/15/fPIC/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">fPIC</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/30/Memory-Management/" class="archive-article-date">
-  <time datetime="2015-04-29T20:44:24.000Z" itemprop="datePublished">Apr 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/30/Memory-Management/">Memory Management</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/29/Multiple-of-3/" class="archive-article-date">
-  <time datetime="2015-04-29T15:40:29.000Z" itemprop="datePublished">Apr 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/29/Multiple-of-3/">Multiple of 3</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/22/Thread-in-Linux/" class="archive-article-date">
-  <time datetime="2015-04-22T05:27:45.000Z" itemprop="datePublished">Apr 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/22/Thread-in-Linux/">Thread in Linux</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/21/PER-CPU/" class="archive-article-date">
-  <time datetime="2015-04-21T09:11:32.000Z" itemprop="datePublished">Apr 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/21/PER-CPU/">PER_CPU</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/15/Process-Creation/" class="archive-article-date">
-  <time datetime="2015-04-15T15:00:04.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/15/Process-Creation/">Process Creation</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2014/01/01/hello-world/" class="archive-article-date">
-  <time datetime="2013-12-31T16:00:00.000Z" itemprop="datePublished">Jan 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2014/01/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </section>
         
           <aside id="sidebar">

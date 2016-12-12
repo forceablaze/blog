@@ -3,17 +3,71 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>OSI Model | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://forceablaze.github.io/blog/archives/index.html">
+  <meta name="description" content="OSI level
+Layer 1 (Physical)
+USB, DSL...
+
+
+Layer 2 (Data Link)
+L2TP, IEEE 802.2...
+
+
+Layer 3 (Network Layer)
+IPv4, IPv6, ICMP, 
+
+
+Layer 4 (Transport Layer)
+TCP, UDP
+
+
+Layer 5 (Session Layer)
+RPC, PAP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSI Model">
+<meta property="og:url" content="http://forceablaze.github.io/blog/2015/05/25/OSI-Model/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="OSI level
+Layer 1 (Physical)
+USB, DSL...
+
+
+Layer 2 (Data Link)
+L2TP, IEEE 802.2...
+
+
+Layer 3 (Network Layer)
+IPv4, IPv6, ICMP, 
+
+
+Layer 4 (Transport Layer)
+TCP, UDP
+
+
+Layer 5 (Session Layer)
+RPC, PAP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="OSI Model">
+<meta name="twitter:description" content="OSI level
+Layer 1 (Physical)
+USB, DSL...
+
+
+Layer 2 (Data Link)
+L2TP, IEEE 802.2...
+
+
+Layer 3 (Network Layer)
+IPv4, IPv6, ICMP, 
+
+
+Layer 4 (Transport Layer)
+TCP, UDP
+
+
+Layer 5 (Session Layer)
+RPC, PAP">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,220 +113,94 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/09/24/qcow2-format/" class="archive-article-date">
-  <time datetime="2015-09-24T09:37:05.000Z" itemprop="datePublished">Sep 24</time>
+        <section id="main"><article id="post-OSI-Model" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2015/05/25/OSI-Model/" class="article-date">
+  <time datetime="2015-05-25T06:07:38.000Z" itemprop="datePublished">2015-05-25</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/09/24/qcow2-format/">qcow2 format</a>
+    <h1 class="article-title" itemprop="name">
+      OSI Model
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/09/22/Software-switches-in-Linux/" class="archive-article-date">
-  <time datetime="2015-09-22T08:51:12.000Z" itemprop="datePublished">Sep 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/09/22/Software-switches-in-Linux/">Software switches in Linux</a>
-    </h1>
-  
+        <h3 id="OSI_level">OSI level</h3><ul>
+<li>Layer 1 (Physical)<ul>
+<li>USB, DSL...</li>
+</ul>
+</li>
+<li>Layer 2 (Data Link)<ul>
+<li>L2TP, IEEE 802.2...</li>
+</ul>
+</li>
+<li>Layer 3 (Network Layer)<ul>
+<li>IPv4, IPv6, ICMP, </li>
+</ul>
+</li>
+<li>Layer 4 (Transport Layer)<ul>
+<li>TCP, UDP</li>
+</ul>
+</li>
+<li>Layer 5 (Session Layer)<ul>
+<li>RPC, PAP</li>
+</ul>
+</li>
+<li>Layer 6 (Presentation Layer)<ul>
+<li>ASCII, JPEG, ...</li>
+</ul>
+</li>
+<li>Layer 7 (Application Layer)<ul>
+<li>HTTP, FTP, telnet</li>
+</ul>
+</li>
+</ul>
+<h3 id="ARP">ARP</h3><p>每個網卡都有個 48-bits 的 MAC address，區別各個網卡，但是上層的協定都是用 IP 來區別，因此需要一套方法對應 MAC 位址與 IP 位址。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Address        HW<span class="built_in">type</span>    HWaddress           Flags Mask    Iface</span><br><span class="line"><span class="number">10.1</span>.<span class="number">9.43</span>      ether     <span class="number">10</span>:c3:<span class="number">7</span>b:b6:<span class="number">4</span>f:<span class="number">38</span>   C             enp0s25</span><br><span class="line"><span class="number">10.1</span>.<span class="number">9.130</span>     ether     <span class="number">00</span>:<span class="number">18</span>:<span class="number">1</span>a:f0:bf:e1   C             enp0s25</span><br><span class="line"><span class="number">192.168</span>.<span class="number">0.1</span>    ether     f4:ec:<span class="number">38</span>:e0:<span class="number">03</span>:<span class="number">92</span>   C             enp0s25</span><br><span class="line"><span class="number">10.1</span>.<span class="number">9.73</span>      ether     <span class="number">90</span>:<span class="number">2</span>b:<span class="number">34</span>:b7:<span class="number">10</span>:<span class="number">97</span>   C             enp0s25</span><br><span class="line"><span class="number">10.1</span>.<span class="number">9.254</span>     ether     <span class="number">00</span>:<span class="number">00</span>:<span class="number">0</span>c:<span class="number">07</span>:ac:<span class="number">09</span>   C             enp0s25</span><br><span class="line"><span class="number">10.1</span>.<span class="number">9.2</span>       ether     <span class="number">00</span>:<span class="number">24</span>:<span class="number">8</span>c:a6:<span class="number">67</span>:<span class="number">67</span>   C             enp0s25</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://forceablaze.github.io/blog/2015/05/25/OSI-Model/" data-id="ciho8m2a3000l43ifihf1zqcj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Network/">Network</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/06/15/fPIC/" class="archive-article-date">
-  <time datetime="2015-06-15T06:54:41.000Z" itemprop="datePublished">Jun 15</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/06/15/fPIC/">fPIC</a>
-    </h1>
+    <a href="/blog/2015/06/15/fPIC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          fPIC
+        
+      </div>
+    </a>
   
+  
+    <a href="/blog/2015/04/30/Memory-Management/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Memory Management</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/05/25/OSI-Model/" class="archive-article-date">
-  <time datetime="2015-05-25T06:07:38.000Z" itemprop="datePublished">May 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/05/25/OSI-Model/">OSI Model</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/30/Memory-Management/" class="archive-article-date">
-  <time datetime="2015-04-29T20:44:24.000Z" itemprop="datePublished">Apr 30</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/30/Memory-Management/">Memory Management</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/29/Multiple-of-3/" class="archive-article-date">
-  <time datetime="2015-04-29T15:40:29.000Z" itemprop="datePublished">Apr 29</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/29/Multiple-of-3/">Multiple of 3</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/22/Thread-in-Linux/" class="archive-article-date">
-  <time datetime="2015-04-22T05:27:45.000Z" itemprop="datePublished">Apr 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/22/Thread-in-Linux/">Thread in Linux</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/21/PER-CPU/" class="archive-article-date">
-  <time datetime="2015-04-21T09:11:32.000Z" itemprop="datePublished">Apr 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/21/PER-CPU/">PER_CPU</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2015/04/15/Process-Creation/" class="archive-article-date">
-  <time datetime="2015-04-15T15:00:04.000Z" itemprop="datePublished">Apr 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2015/04/15/Process-Creation/">Process Creation</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2014/01/01/hello-world/" class="archive-article-date">
-  <time datetime="2013-12-31T16:00:00.000Z" itemprop="datePublished">Jan 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2014/01/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </section>
         
           <aside id="sidebar">
